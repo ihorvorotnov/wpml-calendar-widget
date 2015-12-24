@@ -6,6 +6,7 @@ Description: Provides a calendar widget that is compatible with WPML
 Version: 1.0.0
 Author: Ihor Vorotnov
 Author URI: https://ihorvorotnov.com
+License: GPL v2 or later
 */
 
 function wpml_calendar_widget_init() {
