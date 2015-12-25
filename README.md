@@ -4,6 +4,10 @@ This is a fork of standard WordPress Calendar widget, but with WPML support.
 
 The problem with standard calendar widget is that it runs custom SQL queries and has no hooks to alter that queries from a translation plugin like WPML. That results in a calendar counting all posts, regardless of what current language is and are there **translated** posts.
 
+## Extras
+
+Standard WordPress calendar widget adds `id="today"` to current calendar day's table cell, which is a bit odd. Ids aren't for styling purposes, right? So I've added `class="is-today"`. Also, if you are browsing daily archives, the day you're currently viewing has an extra `is-current-day` class waiting to be styled.
+
 ## Compatibility
 
 - PHP 5.3+ because `__construct()`
