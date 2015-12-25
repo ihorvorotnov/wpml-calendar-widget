@@ -3,7 +3,7 @@
 Plugin Name: WPML Calendar Widget
 Plugin URI: https://pressurgeons.com/plugins/
 Description: Provides a calendar widget that is compatible with WPML
-Version: 1.0.0
+Version: 1.1.0
 Author: Ihor Vorotnov
 Author URI: https://ihorvorotnov.com
 License: GPL v2 or later
@@ -273,12 +273,19 @@ function wpml_calendar_widget_init() {
 			}
 			$newrow = false;
 
+			$classes = array();
+
+			if ( get_query_var( 'day' ) === $day ) {
+				$classes[] = 'is-current-day';
+			}
+
 			if ( $day == gmdate( 'j', $ts ) &&
 				$thismonth == gmdate( 'm', $ts ) &&
 				$thisyear == gmdate( 'Y', $ts ) ) {
-				$calendar_output .= '<td id="today">';
+				$classes[] = 'is-today';
+				$calendar_output .= '<td id="today" class="' . implode( ' ', $classes ) . '">';
 			} else {
-				$calendar_output .= '<td>';
+				$calendar_output .= ( ! empty( $classes ) ) ? '<td class="' . implode( ' ', $classes ) . '">' : '<td>';
 			}
 
 			if ( in_array( $day, $daywithpost ) ) {
