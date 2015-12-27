@@ -25,10 +25,10 @@ It also adds 2 additional CSS classes for styling purposes:
 = Contributing =
 Development takes place on [GitHub](https://github.com/ihorvorotnov/wpml-calendar-widget). Contributions are always welcome!
 
-File issues here, on plugin support page, or on GitHub.
+File issues here (on plugin support forum), or on GitHub.
 
 == Installation ==
-= Requirements and dependencies
+= Requirements and dependencies =
 - This plugins depends on WPML, so it checks if WPML (WPML Multilingual CMS) is installed and activated. If WPML isn't there, you'll get nothing.
 - PHP 5.3+
 
@@ -47,11 +47,8 @@ File issues here, on plugin support page, or on GitHub.
 = I don't see any new widget =
 This widget depends on WPML plugin. If it's not installed or activated, the widget will **not** be added.
 
-= How to translate month names to my language?
+= How to translate month names to my language? =
 You don't need to. The widget takes month names from WordPress Core. You should be fine out of the box.
-
-= Contributing =
-Want to add something? Fork it, write some code, make a pull request.
 
 == Screenshots ==
 1. New calendar widget is available
